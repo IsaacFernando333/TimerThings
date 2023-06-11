@@ -34,7 +34,6 @@
     height: 500px;
     width: 450px;
     background-color: var(--lightpink);
-    /* border-radius: 40px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,7 +67,6 @@
     flex-direction: column;
     align-items: center;
     background-color: var(--midlepink);
-    /* border-radius: 40px; */
     border: 4px solid rgb(199, 188, 188);
     width: 400px;
     height: 300px;
@@ -113,12 +111,12 @@
 }
 
 .definitivo:hover {
-    background-color: red;
+    background-color: rgb(177, 164, 164);
     color: white;
 }
 
 .bts .clicado {
-    background-color: rgba(196, 116, 116, 0.781);
+    background-color: rgba(131, 125, 125, 0.781);
     color: rgb(255, 255, 255);
     border-radius: 30px;
     height: 50px;
@@ -127,11 +125,11 @@
 }
 
 .bts button:hover {
-    background-color: rgba(196, 116, 116, 0.781);
+    background-color: rgba(131, 125, 125, 0.781);
     color: rgb(255, 255, 255);
     border-radius: 30px;
     height: 50px;
-    width: 100px;
+    width: 90px;
     transition: .5s;
     border: 2px solid rgb(255, 255, 255);
 }
@@ -139,7 +137,6 @@
 .temas {
     height: 70px;
     width: 70px;
-    /* background-color:#CF4D6F; */
     position: absolute;
     left: 10px;
     display: flex;
@@ -150,14 +147,25 @@
     border: 2px solid rgb(199, 188, 188);
     color: white;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .temas-div {
     font-size: 15px;
     width: 100%;
+    height: 50%;
     display: none;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     margin: 10px;
     font-weight: 600;
+}
+
+.temas-div input {
+    display: none;
+}
+
+.temas-div label {
+    cursor: pointer;
 }
