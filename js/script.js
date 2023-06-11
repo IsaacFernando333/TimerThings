@@ -5,9 +5,9 @@ const apagar = document.querySelector('.definitivo');
 const tempo = document.querySelector('.tempo');
 const total = document.querySelector('.total');
 
-let s, m, h, d = 0;
+let s = 0, m = 0, h = 0, d = 0;
 let t, z;
-let ts, th, tm, td = 0;
+let ts = 0, th = 0, tm = 0, td = 0;
 
 function formataTelaTimer() {
     if (h < 10 && m < 10 && s < 10) {
@@ -131,10 +131,10 @@ function retornar() {
     h = listaRetorno[0];
     d = listaRetorno[3];
     formataTelaTimer();
-    ts = listaDefinitivo[2]
-    tm = listaDefinitivo[1]
-    th = listaDefinitivo[0]
-    td = listaDefinitivo[3]
+    ts = listaDefinitivo[2];
+    tm = listaDefinitivo[1];
+    th = listaDefinitivo[0];
+    td = listaDefinitivo[3];
     formataTelaDefinitivo();
 }
 
