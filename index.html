@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>PomoPica</title>
+</head>
+<body>
+    <section class="principal">
+        <div class="temas">
+            <p><ion-icon class="temas-2" name="brush-outline"></ion-icon></p>
+            <div class="temas-div">
+                <p>pink</p>
+                <input type="checkbox" class="pink">
+            </div>
+            <div class="temas-div">
+                <p>white</p>
+                <input type="checkbox" class="white">
+            </div>
+            <div class="temas-div">
+                <p>dark</p>
+                <input type="checkbox" class="dark">
+            </div>
+            <div class="temas-div">
+                <p>blue</p>
+                <input type="checkbox" class="blue">
+            </div>
+        </div>
+        <div class="conteudo">
+            <div class="data">
+                <h1 class="titulo">TEMPO TOTAL:</h1>
+                <p class="total">`Dias: 0 → Horas: 0 → Minutos: 0 → Segundos: 0`</p>
+                <button class="definitivo"><ion-icon name="reload-outline"></ion-icon></button>
+            </div>
+            <div class="timer">
+                <p class="tempo">00:00:00</p>
+                <div class="bts">
+                    <button class="iniciar" >INICIAR</button>
+                    <button class="pausar" >PAUSAR</button>
+                    <button class="zerar" >ZERAR</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./js/efeitos.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
