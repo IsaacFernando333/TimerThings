@@ -22,11 +22,20 @@
 }
 
 .principal {
-    width: 100vw;
+    width: 100%;
+    height: 60vh;
+    /* background-color: var(--darkpink); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal-2 {
+    width: 100%;
     height: 100vh;
     background-color: var(--darkpink);
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 
@@ -37,8 +46,67 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: white;
     border: 4px solid rgb(199, 188, 188);
+    border-radius: 20px;
+}
+
+.criatarefa {
+    height: 100px;
+    width: 450px;
+    background-color: var(--lightpink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 4px solid rgb(199, 188, 188);
+    border-radius: 20px;
+}
+
+.inserindo {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inserindo input {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.678);
+    outline: none;
+    box-sizing: content-box;
+    padding-left: 10px;
+}
+
+.individual {
+    width: 90%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnInserir {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.btnInserir ion-icon {
+    border-radius: 30px;
+    padding: 4px;
+    background-color: #21252948;
+    cursor: pointer;
+}
+
+.btnInserir ion-icon:hover {
+    background-color: #212529;
 }
 
 .titulo {
@@ -62,17 +130,6 @@
     padding: 10px;
 }
 
-.timer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--midlepink);
-    border: 4px solid rgb(199, 188, 188);
-    width: 400px;
-    height: 300px;
-    justify-content: center;
-}
-
 .tempo {
     font-size: 70px;
     margin-bottom: 20px;
@@ -83,6 +140,18 @@
     border-radius: 20px;
     border: 4px solid rgb(199, 188, 188);
 }
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--midlepink);
+    border: 4px solid rgb(199, 188, 188);
+    width: 400px;
+    height: 300px;
+    justify-content: center;
+    border-radius: 20px;
+}
+
 
 .bts button {
     height: 40px;
@@ -152,6 +221,7 @@
     border: 2px solid rgb(199, 188, 188);
     color: white;
     cursor: pointer;
+    border-radius: 10px;
     transition: 0.2s;
 }
 

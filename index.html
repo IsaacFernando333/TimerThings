@@ -8,6 +8,7 @@
 </head>
 <body>
     <section class="principal">
+
         <div class="temas">
             <p><ion-icon class="icone-pincel" name="brush-outline"></ion-icon></p>
             <div class="temas-div">
@@ -22,11 +23,6 @@
             </div>
         </div>
         <div class="conteudo">
-            <div class="data">
-                <h1 class="titulo">TEMPO TOTAL:</h1>
-                <p class="total">`Dias: 0 → Horas: 0 → Minutos: 0 → Segundos: 0`</p>
-                <button class="definitivo"><ion-icon name="reload-outline"></ion-icon></button>
-            </div>
             <div class="timer">
                 <p class="tempo">00:00:00</p>
                 <div class="bts">
@@ -34,6 +30,29 @@
                     <button class="pausar" >PAUSAR</button>
                     <button class="zerar" >ZERAR</button>
                 </div>
+            </div>
+            <div class="data">
+                <h1 class="titulo">TEMPO TOTAL:</h1>
+                <p class="total">`Dias: 0 → Horas: 0 → Minutos: 0 → Segundos: 0`</p>
+                <button class="definitivo"><ion-icon name="reload-outline"></ion-icon></button>
+            </div>
+        </div>
+
+    </section>
+    <section class="principal-2">
+        <div class="criatarefa">
+            <div class="inserindo">
+                <div class="individual">
+                    <label for="nome">NOME:</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+                <div class="individual">
+                    <label for="metaTempo">META (h):</label>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="btnInserir">
+                <ion-icon name="add-outline"></ion-icon>
             </div>
         </div>
     </section>

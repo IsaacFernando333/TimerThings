@@ -138,4 +138,5 @@ function retornar() {
     formataTelaDefinitivo();
 }
 
+formataTelaDefinitivo();
 retornar();
