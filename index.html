@@ -1,64 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>PomoPica</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>PicaTimer</title>
 </head>
 <body>
-    <section class="principal">
+    <main class="container-raiz">
+        <section class="tela-span">
+            <div class="esqueleto">
+            </div>
+            <div class="criando-adicionar">
+                <label for="foco">Nome do novo foco:</label>
+                <input class="foco input-foco" id="foco" type="text">
+                <label for="meta-foco">Meta de horas:</label>
+                <input class="meta-foco input-foco" placeholder="Não é obrigatório" id="meta-foco" type="number">
+                <input class="submit-foco" value="CRIAR" type="button">
+            </div>
+            <div class="esqueleto-theme">
+                <h3 class="esqueleto-theme-titulo themes">COLORS</h3>
+                <h4 class="themes one">All elemets White</h4>
+                <h4 class="themes zero">All elemets Black</h4>
+                <h3 class="esqueleto-theme-titulo themes">BACKGROUND</h3>
+                <h4 class="themes two">background → Purple</h4>
+                <h4 class="themes three">backgrund → Blue</h4>
+                <h4 class="themes four">background → Pink</h4>
+            </div>
 
-        <div class="temas">
-            <p><ion-icon class="icone-pincel" name="brush-outline"></ion-icon></p>
-            <div class="temas-div">
-                <input type="checkbox" id="pink" class="pink">
-                <label for="pink">pink</label>
-                <!-- <input type="checkbox" id="white" class="white">
-                <label for="white">white</label> -->
-                <input type="checkbox" id="dark" class="dark">
-                <label for="dark">dark</label>
-                <input type="checkbox" id="blue" class="blue">
-                <label for="blue">blue</label>
+        </section>
+        <!-- lado esquerdo -->
+        <section class="config-esquerdo filho">
+            <div class="esquerdo-btn esquerdo-palleta"><ion-icon class="icone icone-palleta" name="color-palette-outline"></ion-icon></div>
+            <div class="esquerdo-btn esquerdo-resetar"><ion-icon name="refresh-outline"></ion-icon></div>
+            <div class="esquerdo-btn esquerdo-sair"><ion-icon name="log-out-outline"></ion-icon></div>
+            <div class="esquerdo-btn esquerdo-criar">
+                <ion-icon class="icone icone-criar" name="add-outline"></ion-icon>
+                <div class="criando"></div>
             </div>
-        </div>
-        <div class="conteudo">
-            <div class="timer">
-                <p class="tempo">00:00:00</p>
-                <div class="bts">
-                    <button class="iniciar" >INICIAR</button>
-                    <button class="pausar" >PAUSAR</button>
-                    <button class="zerar" >ZERAR</button>
+            <div class="esquerdo-btn esquerdo-baixar"><ion-icon name="download-outline"></ion-icon></ion-icon></div>
+        </section>
+        <!-- meio -->
+        <section class="timer-meio filho">
+            <div class="conteudo-meio">
+                <div class="usuario">
+                    <div class="foto"><img src="./img/20220623_160918.jpg" alt="foto rosto"></div>
+                    <div class="nome">
+                        <h3>Isaac Fernando</h3>
+                    </div>
+                </div>
+                <div class="tempo">
+                    <h1 class="tempo-valor">00:00:00</h1>
+                </div>
+                <div class="div-btn-tempo">
+                    <input type="button" class="btns-tempo start" value="START">
+                    <input type="button" class="btns-tempo pause" value="PAUSE">
+                    <input type="button" class="btns-tempo reset" value="RESET">
+                </div>
+                <div class="resumo">
+                    <div class="resumo-titulo">
+                        <h4 class="resumo-titulo-texto">FOCO X, RESUMO:</h4>
+                    </div>
+                    <div class="valores-totais">
+                        <div class="valores-totais-items dias">1d</div>
+                        <div class="valores-totais-items horas">3h</div>
+                        <div class="valores-totais-items minutos">40m</div>
+                        <div class="valores-totais-items segundos">3s</div>
+                    </div>
                 </div>
             </div>
-            <div class="data">
-                <h1 class="titulo">TEMPO TOTAL:</h1>
-                <p class="total">`Dias: 0 → Horas: 0 → Minutos: 0 → Segundos: 0`</p>
-                <button class="definitivo"><ion-icon name="reload-outline"></ion-icon></button>
+        </section>
+        <!-- lado direito -->
+        <section class="lista-direito filho">
+            <div class="elementos-lista">
+                <div class="titulo-lista">FOCOS</div>
+                <div class="elemento-lista">PROGRAMAÇÃO</div>
+                <div class="elemento-lista">MÚSICA</div>
+                <div class="elemento-lista">JOGAR</div>
+                <div class="elemento-lista">EXERCÍCIOS</div>
+                <div class="elemento-lista">YOUTUBE</div>
+                <div class="elemento-lista">NOTICIAS</div>
+                <div class="elemento-lista">LIVROS</div>
             </div>
-        </div>
-
-    </section>
-    <section class="principal-2">
-        <div class="criatarefa">
-            <div class="inserindo">
-                <div class="individual">
-                    <label for="nome">NOME:</label>
-                    <input type="text" name="nome" id="nome">
-                </div>
-                <div class="individual">
-                    <label for="metaTempo">META (h):</label>
-                    <input type="number">
-                </div>
-            </div>
-            <div class="btnInserir">
-                <ion-icon name="add-outline"></ion-icon>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
+    <script src="./temas-cores.js"></script>
+    <script src="./script-novas-functions.js"></script>
+    <script src="./script-refatorado.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./js/efeitos.js"></script>
-    <script src="./js/script.js"></script>
 </body>
 </html>

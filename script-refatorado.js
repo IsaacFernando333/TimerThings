@@ -1,9 +1,12 @@
-const iniciar = document.querySelector('.iniciar');
-const pausar = document.querySelector('.pausar');
-const zerar = document.querySelector('.zerar');
-const apagar = document.querySelector('.definitivo');
-const tempo = document.querySelector('.tempo');
-const total = document.querySelector('.total');
+const start = document.querySelector('.start');
+const pause = document.querySelector('.pause');
+const reset = document.querySelector('.reset');
+const deleting = document.querySelector('.esquerdo-resetar');
+const tempoValor = document.querySelector('.tempo-valor');
+const dias = document.querySelector('.dias');
+const horas = document.querySelector('.horas');
+const minutos = document.querySelector('.minutos');
+const segundos = document.querySelector('.segundos');
 
 let s = 0, m = 0, h = 0, d = 0;
 let t, z;
@@ -11,24 +14,27 @@ let ts = 0, th = 0, tm = 0, td = 0;
 
 function formataTelaTimer() {
     if (h < 10 && m < 10 && s < 10) {
-        tempo.innerHTML = `0${h}:0${m}:0${s}`;
+        tempoValor.innerHTML = `0${h}:0${m}:0${s}`;
     } else if (m < 10 && s < 10) {
-        tempo.innerHTML = `${h}:0${m}:0${s}`;
+        tempoValor.innerHTML = `${h}:0${m}:0${s}`;
     } else if (h < 10 && s < 10) {
-        tempo.innerHTML = `0${h}:${m}:0${s}`;
+        tempoValor.innerHTML = `0${h}:${m}:0${s}`;
     } else if (h < 10 && m < 10) {
-        tempo.innerHTML = `0${h}:0${m}:${s}`;
+        tempoValor.innerHTML = `0${h}:0${m}:${s}`;
     } else if (h < 10) {
-        tempo.innerHTML = `0${h}:${m}:${s}`;
+        tempoValor.innerHTML = `0${h}:${m}:${s}`;
     } else if (m < 10) {
-        tempo.innerHTML = `${h}:0${m}:${s}`;
+        tempoValor.innerHTML = `${h}:0${m}:${s}`;
     } else if (s < 10) {
-        tempo.innerHTML = `${h}:${m}:0${s}`;
+        tempoValor.innerHTML = `${h}:${m}:0${s}`;
     }
 }
 
 function formataTelaDefinitivo() {
-    total.innerHTML = `Dias: ${td} → Horas: ${th} → Minutos: ${tm} → Segundos: ${ts}`;
+    dias.innerHTML = `${td}d`;
+    horas.innerHTML = `${th}h`;
+    minutos.innerHTML = `${tm}m`;
+    segundos.innerHTML = `${ts}s`;
 }
 
 function iniciaTudo() {
@@ -76,7 +82,7 @@ function iniciaTudo() {
     }, 1000);
 }
 
-iniciar.addEventListener('click', function(e) {
+start.addEventListener('click', function(e) {
     clearInterval(t);
     clearInterval(z);
     // iniciaT();
@@ -84,16 +90,16 @@ iniciar.addEventListener('click', function(e) {
     salvar();
 });
 
-pausar.addEventListener('click', function(e) {
+pause.addEventListener('click', function(e) {
     clearInterval(t);
     clearInterval(z);
     salvar();
 });
 
-zerar.addEventListener('click', function(e) {
+reset.addEventListener('click', function(e) {
     clearInterval(t);
     clearInterval(z);
-    tempo.innerHTML = "00:00:00";
+    tempoValor.innerHTML = "00:00:00";
     s = 0;
     m = 0;
     h = 0;
@@ -101,10 +107,12 @@ zerar.addEventListener('click', function(e) {
     salvar();
 });
 
-apagar.addEventListener('click', function(e) {
-    let c = confirm("DESEJA APAGAR ESSA INFORMAÇÃO?");
+deleting.addEventListener('click', function(e) {
+    clearInterval(t);
+    clearInterval(z);
+    let c = confirm("DESEJA deletar ESSA INFORMAÇÃO?");
     if (c) {
-        localStorage.removeItem('tempoTotal');
+        localStorage.removeItem('tempoValorTotal');
         [ts, th, tm, td] = [0, 0, 0, 0];
         formataTelaDefinitivo();
     } else {
@@ -117,13 +125,13 @@ function salvar() {
     const definitivos = [th, tm, ts, td];
     const dadosJSON = JSON.stringify(dados);
     const definitivosJSON = JSON.stringify(definitivos);
-    localStorage.setItem('tempoSalvo', dadosJSON);
-    localStorage.setItem('tempoTotal', definitivosJSON);
+    localStorage.setItem('tempoValorSalvo', dadosJSON);
+    localStorage.setItem('tempoValorTotal', definitivosJSON);
 }
 
 function retornar() {
-    const retorno = localStorage.getItem('tempoSalvo');
-    const retornoDefinitivo = localStorage.getItem('tempoTotal');
+    const retorno = localStorage.getItem('tempoValorSalvo');
+    const retornoDefinitivo = localStorage.getItem('tempoValorTotal');
     const listaRetorno = JSON.parse(retorno);
     const listaDefinitivo = JSON.parse(retornoDefinitivo);
     s = listaRetorno[2];
