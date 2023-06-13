@@ -1,4 +1,3 @@
-const elementoLista = document.querySelectorAll('div.elemento-lista');
 const tituloResumo = document.querySelector('.resumo-titulo-texto');
 const criar = document.querySelector('.icone-criar');
 const palleta = document.querySelector('.icone-palleta');
@@ -11,11 +10,15 @@ const btnCriar = document.querySelector('.submit-foco');
 const focos = document.querySelector('.elementos-lista');
 
 document.addEventListener('click', (e) => {
+    const elementoLista = document.querySelectorAll('div.elemento-lista');
     for (div of elementoLista) {
         if (e.target === div) {
+            div.style.border = '2px dashed gray';
             let foco = div.innerText;
             tituloResumo.innerHTML = `FOCO ${foco}, RESUMO:`;
-        };
+        } else {
+            div.style.border = 'none';
+        }
     };
 });
 
@@ -44,14 +47,17 @@ criar.addEventListener('click', (e) => {
 });
 
 btnCriar.addEventListener('click', (e) => {
-    const valorCriar = document.querySelector('.input-foco').value;
+    const valorCriar = document.querySelector('.input-foco');
     let elemento = document.createElement('div');
-    let valor = document.createTextNode(`${valorCriar}`);
+    let valor = document.createTextNode(`${valorCriar.value}`);
     elemento.className = 'elemento-lista';
     elemento.appendChild(valor);
-    if (valorCriar !== "") {
+    if (valorCriar.value !== "") {
         focos.appendChild(elemento);
+        valorCriar.value = '';
+        valorCriar.focus();
     } else {
+        valorCriar.focus();
         return;
     };
 })
