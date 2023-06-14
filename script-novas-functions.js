@@ -46,6 +46,32 @@ criar.addEventListener('click', (e) => {
     esqueleto.appendChild(criando);
 });
 
+
+
+let trf = [];
+
+function garanteTarefa(b) {
+    if (localStorage.tarefas) {
+        trf = JSON.parse(localStorage.getItem('tarefas'));
+    };
+    
+    localStorage.setItem('tarefas', JSON.stringify(trf));
+    trf.push(b);
+    localStorage.tarefas = JSON.stringify(trf);
+}
+
+function mostraDentro() {
+   let versaoArray = JSON.parse(localStorage.getItem('tarefas'));
+   for (el of versaoArray) {
+       let elemento = document.createElement('div');
+       elemento.className = 'elemento-lista';
+       let texto = document.createTextNode(el);
+       elemento.appendChild(texto);
+       focos.appendChild(elemento);
+   };
+}
+
+
 btnCriar.addEventListener('click', (e) => {
     const valorCriar = document.querySelector('.input-foco');
     let elemento = document.createElement('div');
@@ -54,10 +80,14 @@ btnCriar.addEventListener('click', (e) => {
     elemento.appendChild(valor);
     if (valorCriar.value !== "") {
         focos.appendChild(elemento);
+        garanteTarefa(`${valorCriar.value}`);
         valorCriar.value = '';
         valorCriar.focus();
     } else {
         valorCriar.focus();
         return;
     };
-})
+});
+
+
+mostraDentro();

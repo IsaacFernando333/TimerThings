@@ -20,7 +20,7 @@
     display: none;
     align-items: start;
     justify-content: center;
-    height: 120%;
+    height: calc(100vh + 42px);
     width: 100%;
     z-index: 1;
 }
