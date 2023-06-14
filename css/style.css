@@ -276,8 +276,7 @@
 }
 
 .btns-tempo:hover {
-    height: 55px;
-    width: 140px;
+    transform: scale(1.07);
     transition: .5s;
     background-color: var(--primary);
     color: var(--secondary);
