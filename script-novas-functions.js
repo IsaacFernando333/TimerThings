@@ -5,6 +5,7 @@ const span = document.querySelector('.tela-span');
 const esqueleto = document.querySelector('.esqueleto');
 const temas = document.querySelector('.esqueleto-theme');
 const criando = document.querySelector('.criando-adicionar');
+const resetar = document.querySelector('.esquerdo-sair');
 
 const btnCriar = document.querySelector('.submit-foco');
 const focos = document.querySelector('.elementos-lista');
@@ -47,6 +48,14 @@ criar.addEventListener('click', (e) => {
 });
 
 
+resetar.addEventListener('click', () => {
+    let rst = confirm('Essa funcionalidade não existe ainda! Isso apenas apagará tudo definitvamente');
+    if (rst) {
+        localStorage.clear();
+        location.reload();
+    }
+    return;
+})
 
 let trf = [];
 
