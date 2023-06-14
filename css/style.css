@@ -210,7 +210,7 @@
 
 .usuario {
     height: 70px;
-    width: 240px;
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: start;
