@@ -18,6 +18,7 @@ function theme(pri, secon) {
 esqueletoThemes.addEventListener('click', (e) => {
     if (e.target === Allwhite) {
         theme(themeWhite[0], themeWhite[1]);
+        // localStorage.setItem9('THEME', 56)
     };
 
     if (e.target === Allblack) {

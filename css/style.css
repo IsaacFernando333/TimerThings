@@ -103,11 +103,42 @@
 }
 
 
+.novoUser {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
+    justify-content: space-around;
+}
+
+.novoUser-titulo {
+    background-color: var(--secondary);
+    padding: 10px;
+}
+
+.novoUser-nome {
+    padding-left: 10px;
+    outline: none;
+}
+
+.novoUser-foto {
+    background-color: var(--secondary);
+    padding: 4px;
+}
+
+.novoUser-btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
 /* Container pai de todos */
 
 .container-raiz {
     width: 100%;
-    min-height: 120vh;
+    min-height: 100vh;
     background-color: var(--background);
     display: flex;
     align-items: start;
@@ -118,7 +149,7 @@
 
 .filho {
     background-color: var(--primary);
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 /* filho config esquerdo e seus filhos */
@@ -166,6 +197,7 @@
     align-items: center;
     justify-content: center;
     color: var(--primary);
+    margin-bottom: 40px;
 }
 
 .conteudo-meio {
@@ -181,7 +213,7 @@
     width: 240px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
 }
 
 .usuario .foto {
@@ -192,6 +224,7 @@
     justify-content: center;
     border-radius: 40px;
     background-color: var(--secondary);
+    margin-right: 20px;
 }
 
 .foto img {
@@ -350,9 +383,84 @@
         display: flex;
         flex-direction: row;
         margin: 0;
+        min-width: 90%;
+        height: 70px;
+        justify-content: space-between;
+    }
+
+}
+
+@media (max-width: 1010px) {
+    .container-raiz {
+        width: 100vw;
+        min-height: 100%;
+        background-color: var(--background);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timer-meio {
+        margin-top: 40px;
+    }
+
+    .config-esquerdo {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0 0 0;
         min-width: 400px;
         height: 70px;
         justify-content: space-between;
+    }
+
+    .lista-direito {
+        margin: 20px 0 60px 0;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+    .container-raiz {
+        width: 100vw;
+        min-height: 100%;
+        background-color: var(--background);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timer-meio {
+    min-width: 90%;
+    min-height: 610px;
+    margin-top: 40px;
+    }
+
+    .tempo {
+        height: 90px;
+    }
+
+    .tempo-valor {
+        font-size: 50px;
+    }
+
+    .btns-tempo {
+        width: 30%;
+        font-size: 14px;
+    }
+
+    .config-esquerdo {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0 0 0;
+        min-width: 90%;
+        height: 70px;
+        justify-content: space-between;
+    }
+
+    .lista-direito {
+        min-width: 90%;
+        margin: 20px 0 60px 0;
     }
 
 }
