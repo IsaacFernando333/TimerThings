@@ -42,7 +42,7 @@ palleta.addEventListener('click', (e) => {
 criar.addEventListener('click', (e) => {
     criando.style.display = 'flex';
     temas.style.display = 'none';
-    esqueleto.style.height = '400px';
+    esqueleto.style.height = '300px';
     esqueleto.appendChild(criando);
 });
 
