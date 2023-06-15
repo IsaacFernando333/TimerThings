@@ -8,6 +8,26 @@ const horas = document.querySelector('.horas');
 const minutos = document.querySelector('.minutos');
 const segundos = document.querySelector('.segundos');
 
+document.addEventListener('click', function(e) {
+    if (e.target === start) {
+        start.classList = 'clicado';
+    } else {
+        start.classList = 'btns-tempo'
+    };
+
+    if (e.target === pause) {
+        pause.classList = 'clicado';
+    } else {
+        pause.classList = 'btns-tempo';
+    };
+
+    if (e.target === reset) {
+        reset.classList = 'clicado';
+    } else {
+        reset.classList = 'btns-tempo';
+    };
+});
+
 let s = 0, m = 0, h = 0, d = 0;
 let t, z;
 let ts = 0, th = 0, tm = 0, td = 0;

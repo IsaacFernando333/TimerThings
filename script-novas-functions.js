@@ -6,9 +6,6 @@ const esqueleto = document.querySelector('.esqueleto');
 const temas = document.querySelector('.esqueleto-theme');
 const criando = document.querySelector('.criando-adicionar');
 const resetar = document.querySelector('.esquerdo-sair');
-
-
-
 const btnCriar = document.querySelector('.submit-foco');
 const focos = document.querySelector('.elementos-lista');
 
@@ -81,7 +78,6 @@ function mostraDentro() {
        focos.appendChild(elemento);
    };
 }
-
 
 btnCriar.addEventListener('click', (e) => {
     const valorCriar = document.querySelector('.input-foco');
