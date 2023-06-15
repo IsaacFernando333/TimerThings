@@ -6,6 +6,12 @@
     user-select: none;
 }
 
+.container-raiz {
+    /* background-image: url(../rosa.svg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 :root {
     --primary: #1a1a1a;
     --secondary: #FFFFFF;
@@ -20,7 +26,7 @@
     display: none;
     align-items: start;
     justify-content: center;
-    height: calc(100vh + 42px);
+    height: calc(100vh);
     width: 100%;
     z-index: 1;
 }
@@ -392,7 +398,8 @@
 @media (max-width: 1010px) {
     .container-raiz {
         width: 100vw;
-        min-height: 100%;
+        min-height: 100vh;
+        max-height: 100%;
         background-color: var(--background);
         display: flex;
         flex-direction: column;
@@ -422,7 +429,8 @@
 @media (max-width: 550px) {
     .container-raiz {
         width: 100vw;
-        min-height: 100%;
+        min-height: 100vh;
+        max-height: 100%;
         background-color: var(--background);
         display: flex;
         flex-direction: column;

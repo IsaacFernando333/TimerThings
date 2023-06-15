@@ -7,6 +7,8 @@ const temas = document.querySelector('.esqueleto-theme');
 const criando = document.querySelector('.criando-adicionar');
 const resetar = document.querySelector('.esquerdo-sair');
 
+
+
 const btnCriar = document.querySelector('.submit-foco');
 const focos = document.querySelector('.elementos-lista');
 
@@ -34,8 +36,8 @@ document.addEventListener('click', (e) => {
 });
 
 palleta.addEventListener('click', (e) => {
-    criando.style.display = 'none';
     temas.style.display = 'flex';
+    criando.style.display = 'none';
     esqueleto.appendChild(temas);
     esqueleto.style.height = 'fit-content';
 });
@@ -53,7 +55,7 @@ resetar.addEventListener('click', () => {
     if (rst) {
         localStorage.clear();
         location.reload();
-    }
+    };
     return;
 })
 
