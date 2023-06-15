@@ -130,7 +130,7 @@ reset.addEventListener('click', function(e) {
 deleting.addEventListener('click', function(e) {
     clearInterval(t);
     clearInterval(z);
-    let c = confirm("DESEJA deletar ESSA INFORMAÇÃO?");
+    let c = confirm("DESEJA DELETAR ESSA INFORMAÇÃO?");
     if (c) {
         localStorage.removeItem('tempoValorTotal');
         [ts, th, tm, td] = [0, 0, 0, 0];

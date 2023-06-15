@@ -6,21 +6,21 @@ const esqueleto = document.querySelector('.esqueleto');
 const temas = document.querySelector('.esqueleto-theme');
 const criando = document.querySelector('.criando-adicionar');
 const resetar = document.querySelector('.esquerdo-sair');
-const btnCriar = document.querySelector('.submit-foco');
 const focos = document.querySelector('.elementos-lista');
+const btnCriar = document.querySelector('.submit-foco');
 
-document.addEventListener('click', (e) => {
-    const elementoLista = document.querySelectorAll('div.elemento-lista');
-    for (div of elementoLista) {
-        if (e.target === div) {
-            div.style.border = '2px dashed gray';
-            let foco = div.innerText;
-            tituloResumo.innerHTML = `FOCO ${foco}, RESUMO:`;
-        } else {
-            div.style.border = 'none';
-        }
-    };
-});
+// document.addEventListener('click', (e) => {
+//     const elementoLista = document.querySelectorAll('div.elemento-lista');
+//     for (div of elementoLista) {
+//         if (e.target === div) {
+//             div.style.border = '2px dashed gray';
+//             let foco = div.innerText;
+//             tituloResumo.innerHTML = `FOCO ${foco}, RESUMO:`;
+//         } else {
+//             div.style.border = 'none';
+//         }
+//     };
+// });
 
 document.addEventListener('click', (e) => {
     if (e.target === criar || e.target === palleta) {
@@ -54,7 +54,7 @@ resetar.addEventListener('click', () => {
         location.reload();
     };
     return;
-})
+});
 
 let trf = [];
 
