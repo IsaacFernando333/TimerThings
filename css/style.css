@@ -181,7 +181,7 @@
     font-size: 36px;
     cursor: pointer;
     margin: 0 0 20px 0;
-    transition: trasform 1s;
+    transition: transform .5s;
 }
 
 .esquerdo-btn:hover {
@@ -189,7 +189,7 @@
     background-color: var(--secondary);
     box-sizing: border-box;
     border: 2px solid var(--primary);
-    transform: scale(1.05);
+    transform: scale(1.09);
 }
 
 .icone {
