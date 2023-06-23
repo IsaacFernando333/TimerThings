@@ -27,7 +27,9 @@ document.addEventListener('click', (e) => {
         span.style.display = 'flex';
     }
 
-    if (e.target === span) {
+    if (localStorage.getItem('user') === null) {
+        span.style.display = 'flex';
+    } else if (e.target === span) {
         span.style.display = 'none';
     };
 });

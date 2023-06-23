@@ -20,7 +20,7 @@
     display: none;
     align-items: start;
     justify-content: center;
-    height: calc(100vh);
+    height: 100%;
     width: 100%;
     z-index: 1;
 }
@@ -153,7 +153,6 @@
 
 .filho {
     background-color: var(--primary);
-    margin-top: 60px;
 }
 
 /* filho config esquerdo e seus filhos */
