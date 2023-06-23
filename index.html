@@ -7,42 +7,37 @@
     <title>Timer things</title>
 </head>
 <body>
+    <section class="tela-span">
+        <div class="esqueleto">
+        </div>
+        
+        <div class="novoUser">
+            <h1 class="novoUser-titulo">Olá novo Usuário!</h1>
+            <input type="text" class="novoUser-nome">
+            <input type="file" class="novoUser-foto" id="">
+            <input type="button" class="novoUser-btn" value="Criar user">
+        </div>
+
+        <div class="criando-adicionar">
+            <label for="foco">Nome do novo foco:</label>
+            <input class="foco input-foco" id="foco" type="text">
+            <label for="meta-foco">Meta de horas:</label>
+            <input class="meta-foco input-foco" placeholder="Não é obrigatório" id="meta-foco" type="number">
+            <input class="submit-foco" value="CRIAR" type="button">
+        </div>
+
+        <div class="esqueleto-theme">
+            <h3 class="esqueleto-theme-titulo themes">COLORS</h3>
+            <h4 class="themes one">All elemets White</h4>
+            <h4 class="themes zero">All elemets Black</h4>
+            <h3 class="esqueleto-theme-titulo themes">BACKGROUND</h3>
+            <h4 class="themes two">background → Purple</h4>
+            <h4 class="themes three">backgrund → Blue</h4>
+            <h4 class="themes four">background → Pink</h4>
+        </div>
+
+    </section>
     <main class="container-raiz">
-        <section class="tela-span">
-            <div class="esqueleto">
-            </div>
-            
-            <div class="novoUser">
-                <h1 class="novoUser-titulo">Olá novo Usuário!</h1>
-                <input type="text" class="novoUser-nome">
-                <input type="file" class="novoUser-foto" id="">
-                <input type="button" class="novoUser-btn" value="Criar user">
-            </div>
-            <!-- div do JS -->
-            <div class="criando-adicionar">
-                <label for="foco">Nome do novo foco:</label>
-                <input class="foco input-foco" id="foco" type="text">
-                <label for="meta-foco">Meta de horas:</label>
-                <input class="meta-foco input-foco" placeholder="Não é obrigatório" id="meta-foco" type="number">
-                <input class="submit-foco" value="CRIAR" type="button">
-            </div>
-
-            <!-- div do JS -->
-
-            <div class="esqueleto-theme">
-                <h3 class="esqueleto-theme-titulo themes">COLORS</h3>
-                <h4 class="themes one">All elemets White</h4>
-                <h4 class="themes zero">All elemets Black</h4>
-                <h3 class="esqueleto-theme-titulo themes">BACKGROUND</h3>
-                <h4 class="themes two">background → Purple</h4>
-                <h4 class="themes three">backgrund → Blue</h4>
-                <h4 class="themes four">background → Pink</h4>
-            </div>
-
-            <!-- div do js -->
-
-        </section>
-        <!-- lado esquerdo -->
         <section class="config-esquerdo filho">
             <div class="esquerdo-btn esquerdo-palleta"><ion-icon class="icone icone-palleta" name="color-palette-outline"></ion-icon></div>
             <div class="esquerdo-btn esquerdo-resetar"><ion-icon name="refresh-outline"></ion-icon></div>
@@ -53,11 +48,9 @@
             </div>
             <div class="esquerdo-btn esquerdo-baixar"><ion-icon name="download-outline"></ion-icon></ion-icon></div>
         </section>
-        <!-- meio -->
         <section class="timer-meio filho">
             <div class="conteudo-meio">
                 <div class="usuario">
-                    <!-- <img src="./img/istockphoto-1300845620-612x612.jpg" alt="foto rosto"> -->
                     <div class="foto"></div>
                     <div class="nome">
                         <h3 class="nome-valor">Incognito User</h3>
@@ -84,7 +77,6 @@
                 </div>
             </div>
         </section>
-        <!-- lado direito -->
         <section class="lista-direito filho">
             <div class="elementos-lista">
                 <div class="titulo-lista">FOCOS</div>

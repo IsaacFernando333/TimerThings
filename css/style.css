@@ -6,12 +6,6 @@
     user-select: none;
 }
 
-.container-raiz {
-    /* background-image: url(../rosa.svg); */
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 :root {
     --primary: #1a1a1a;
     --secondary: #FFFFFF;
@@ -147,6 +141,8 @@
 .container-raiz {
     width: 100%;
     min-height: 100vh;
+    box-sizing: border-box;
+    padding: 40px 40px 0 40px;
     background-color: var(--background);
     display: flex;
     align-items: start;
@@ -167,7 +163,6 @@
     max-width: 70px;
     min-width: 70px;
     height: fit-content;
-    margin-left: 40px;
 }
 
 .esquerdo-btn {
@@ -207,7 +202,6 @@
     align-items: center;
     justify-content: center;
     color: var(--primary);
-    margin-bottom: 40px;
 }
 
 .conteudo-meio {
@@ -353,7 +347,6 @@
     width: 350px;
     height: auto;
     display: flex;
-    margin-right: 40px;
     /* align-items: start; */
     justify-content: center;
     overflow-y: auto;
