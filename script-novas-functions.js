@@ -37,14 +37,12 @@ document.addEventListener('click', (e) => {
 palleta.addEventListener('click', (e) => {
     temas.style.display = 'flex';
     criando.style.display = 'none';
-    esqueleto.style.height = '500px';
     esqueleto.appendChild(temas);
 });
 
 criar.addEventListener('click', (e) => {
     criando.style.display = 'flex';
     temas.style.display = 'none';
-    esqueleto.style.height = '400px';
     esqueleto.appendChild(criando);
 });
 
