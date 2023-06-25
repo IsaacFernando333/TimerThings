@@ -16,7 +16,7 @@
 
 .tela-span {
     background-color: rgba(0, 0, 0, 0.267);
-    position: absolute;
+    position: fixed;
     display: none;
     align-items: start;
     justify-content: center;
