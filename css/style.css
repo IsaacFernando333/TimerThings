@@ -511,5 +511,7 @@
     .clicado {
         height: 40px;
         width: 90px;
+        font-size: 10px;
+        border-radius: 20px;
     }
 }
