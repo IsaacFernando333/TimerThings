@@ -3,11 +3,14 @@ const Allblack = document.querySelector('.zero');
 const purple = document.querySelector('.two');
 const blue = document.querySelector('.three');
 const pink = document.querySelector('.four');
+const black = document.querySelector('.five');
+const white = document.querySelector('.six');
+const tudo = document.querySelectorAll('.filho');
 const esqueletoThemes = document.querySelector('.esqueleto-theme');
 
 const themeWhite = ['#FFFFFF', '#1a1a1a'];
 const themeBlack = ['#1a1a1a', '#FFFFFF'];
-const colorsBackground = {'purple': '#68279A', 'pink': '#976081', 'blue': '#2E5287'};
+const colorsBackground = {'purple': '#68279A', 'pink': '#976081', 'blue': '#2E5287', 'black': '#1a1a1a', 'white': '#FFFFFF'};
 const rootElement = document.documentElement;
 
 function theme(pri, secon) {
@@ -30,16 +33,41 @@ esqueletoThemes.addEventListener('click', (e) => {
     if (e.target === purple) {
         rootElement.style.setProperty('--background', `${colorsBackground.purple}`);
         localStorage.setItem('COLOR', JSON.stringify([colorsBackground.purple]));
+        for (e of tudo) {
+            e.style.border = 'none';
+        };
     };
 
     if (e.target === blue) {
         rootElement.style.setProperty('--background', `${colorsBackground.blue}`);
         localStorage.setItem('COLOR', JSON.stringify([colorsBackground.blue]));
+        for (e of tudo) {
+            e.style.border = 'none';
+        };
     };
 
     if (e.target === pink) {
         rootElement.style.setProperty('--background', `${colorsBackground.pink}`);
         localStorage.setItem('COLOR', JSON.stringify([colorsBackground.pink]));
+        for (e of tudo) {
+            e.style.border = 'none';
+        };
+    };
+
+    if (e.target === black) {
+        rootElement.style.setProperty('--background', `${colorsBackground.black}`);
+        localStorage.setItem('COLOR', JSON.stringify([colorsBackground.black]));
+        for (e of tudo) {
+            e.style.border = '2px solid var(--secondary)';
+        };
+    };
+
+    if (e.target === white) {
+        rootElement.style.setProperty('--background', `${colorsBackground.white}`);
+        localStorage.setItem('COLOR', JSON.stringify([colorsBackground.white]));
+        for (e of tudo) {
+            e.style.border = '2px solid var(--secondary)';
+        };
     };
 });
 
@@ -50,6 +78,11 @@ function garanteThemeAndColor() {
     rootElement.style.setProperty('--background', cl[0]);
     rootElement.style.setProperty('--primary', th[0]);
     rootElement.style.setProperty('--secondary', th[1]);
+    for (e of tudo) {
+        if (cl[0] === '#1a1a1a' || cl[0] === '#FFFFFF') {
+            e.style.border = '2px solid var(--secondary)';
+        };
+    };
 }
 
 garanteThemeAndColor();

@@ -225,6 +225,10 @@
     padding: 16px;
 }
 
+.esquerdo-baixar {
+    margin: 0 0 0 0;
+}
+
 /* filho meio */
 
 .timer-meio {
