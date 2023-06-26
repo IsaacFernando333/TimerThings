@@ -27,6 +27,7 @@ btn.addEventListener('click', function() {
         localStorage.setItem('user', JSON.stringify(valorNome));
         location.reload();
     }
+    alert('O site apresenta funcionamento incorreto quando executado em segundo plano. Procure sempre mantê-lo aberto quando estiver ativo.');
 });
 
 function garanteFotoUser() {
