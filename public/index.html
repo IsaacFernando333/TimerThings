@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#c8a0a0">
+    <title>Timer things</title>
+</head>
+<body>
+    <section class="tela-span">
+        <div class="esqueleto">
+        </div>
+        
+        <div class="novoUser">
+            <h1 class="novoUser-titulo z usr-cheio">Olá novo Usuário!</h1>
+            <input type="text" placeholder="Nome" class="novoUser-nome usr-cheio">
+            <h1 class="novoUser-titulo msg usr-cheio">Selecione uma foto:</h1>
+            <input type="file" class="novoUser-foto usr-cheio" id="">
+            <input type="button" class="novoUser-btn" value="Criar user">
+        </div>
+
+        <div class="criando-adicionar">
+            <label for="foco" class="top-label bala">Nome do novo foco:</label>
+            <input class="foco input-foco bala" placeholder="Nome" id="foco" type="text">
+            <label for="meta-foco" class=" bala">Meta de horas:</label>
+            <input class="meta-foco input-foco bala" placeholder="Não é obrigatório" id="meta-foco" type="number">
+            <input class="submit-foco" value="CRIAR" type="button">
+        </div>
+
+        <div class="esqueleto-theme">
+            <h3 class="esqueleto-theme-titulo themes">COLORS</h3>
+            <h4 class="themes one">All elemets White</h4>
+            <h4 class="themes zero">All elemets Black</h4>
+            <h3 class="esqueleto-theme-titulo themes">BACKGROUND</h3>
+            <h4 class="themes two">background → Purple</h4>
+            <h4 class="themes three">backgrund → Blue</h4>
+            <h4 class="themes four">background → Pink</h4>
+            <h4 class="themes five">background → Black</h4>
+            <h4 class="themes six">background → White</h4>
+        </div>
+    </section>
+    <main class="container-raiz">
+        <section class="config-esquerdo filho">
+            <div class="esquerdo-btn esquerdo-palleta"><ion-icon class="icone icone-palleta" name="color-palette-outline"></ion-icon></div>
+            <div class="esquerdo-btn esquerdo-resetar"><ion-icon name="refresh-outline"></ion-icon></div>
+            <div class="esquerdo-btn esquerdo-sair"><ion-icon name="log-out-outline"></ion-icon></div>
+            <div class="esquerdo-btn esquerdo-criar">
+                <ion-icon class="icone icone-criar" name="add-outline"></ion-icon>
+                <div class="criando"></div>
+            </div>
+            <div class="esquerdo-btn esquerdo-baixar"><ion-icon name="download-outline"></ion-icon></ion-icon></div>
+        </section>
+        <section class="timer-meio filho">
+            <div class="conteudo-meio">
+                <div class="usuario">
+                    <div class="foto"></div>
+                    <div class="nome">
+                        <h3 class="nome-valor">Incognito User</h3>
+                    </div>
+                </div>
+                <div class="tempo">
+                    <h1 class="tempo-valor">00:00:00</h1>
+                </div>
+                <div class="div-btn-tempo">
+                    <input type="button" class="btns-tempo start" value="START">
+                    <input type="button" class="btns-tempo pause" value="PAUSE">
+                    <input type="button" class="btns-tempo reset" value="RESET">
+                </div>
+                <div class="resumo">
+                    <div class="resumo-titulo">
+                        <h4 class="resumo-titulo-texto">FOCO TOTAL</h4>
+                    </div>
+                    <div class="valores-totais">
+                        <div class="valores-totais-items dias">1d</div>
+                        <div class="valores-totais-items horas">3h</div>
+                        <div class="valores-totais-items minutos">40m</div>
+                        <div class="valores-totais-items segundos">3s</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chartCard">
+                <div class="chartBox">
+                </div>
+              </div>
+              <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+              
+        </section>
+        <section class="lista-direito filho">
+            <div class="elementos-lista">
+                <div class="titulo-lista">FOCOS</div>
+            </div>
+        </section>
+    </main>
+    <script src="./Criar-user.js"></script>
+    <script src="./temas-cores.js"></script>
+    <script src="./script-novas-functions.js"></script>
+    <script src="./script-refatorado.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
